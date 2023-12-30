@@ -9,7 +9,7 @@ import nltk
 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # 创建语料库
-text = "这是一个测试语料库。这个语料库用于训练模型。"
+text = ""#此处可添加自己的json文件
 words = nltk.word_tokenize(text)
 
 # 创建训练和测试数据
@@ -65,5 +65,5 @@ def calculate_ppl(sentence):
     return prediction.mean().item()
 
 # 测试
-test_text = "这是一个测试文本。"
+test_text = ""#此处添加自己的json文件
 print(calculate_ppl(test_text))
